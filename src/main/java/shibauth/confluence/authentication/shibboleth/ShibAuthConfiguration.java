@@ -219,6 +219,11 @@ public class ShibAuthConfiguration {
     private boolean usingShibLoginFilter;
 
     /**
+     * Admin user
+     */
+    private String adminUser = "admin";
+
+    /**
      * Should this pluggin try to create new groups as indicated
      * by IdP (when the group value is non-existent in confluence)
      *
@@ -510,6 +515,10 @@ public class ShibAuthConfiguration {
 
     public void setLocalLoginSupported(boolean localLoginSupported) {
         this.localLoginSupported = localLoginSupported;
+    }
+
+    public String getAdminUser() {
+        return adminUser;
     }
 
     /**
